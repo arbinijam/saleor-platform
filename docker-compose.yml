@@ -28,7 +28,7 @@ services:
   dashboard:
     image: ghcr.io/saleor/saleor-dashboard:latest
     ports:
-      - 9000:80
+      - 9002:80
     restart: unless-stopped
 
   db:
@@ -48,7 +48,7 @@ services:
   redis:
     image: library/redis:7.0-alpine
     ports:
-      - 6379:6379
+      - 6380:6379
     restart: unless-stopped
     networks:
       - saleor-backend-tier
